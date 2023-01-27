@@ -2,7 +2,7 @@ import { ColorModeContext, themeSettings, useMode } from './theme';
 import { CssBaseline, ThemeProvider } from '@mui/material';
 import Topbar from './global/Topbar';
 import Dashboard from './scenes/dashboard';
-// import Sidebar from './global/Sidebar';
+import Sidebar from './global/Sidebar';
 // import Invoices from './scenes/invoices'
 // import Team from './scenes/team'
 // import Contacts from './scenes/contacts'
@@ -22,6 +22,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+          <Sidebar />
           <main className="content">
             <Topbar />
             <Routes>
