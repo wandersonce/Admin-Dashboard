@@ -30,8 +30,9 @@ const userSchema = yup.object().shape({
 export default function Forms() {
   const isNonMobile = useMediaQuery('(min-width:600px)');
 
-  const handleFormSubmit = (values) => {
+  const handleFormSubmit = (values, { resetForm }) => {
     console.log(values);
+    resetForm();
   };
   return (
     <Box m="20px">
@@ -138,7 +139,7 @@ export default function Forms() {
                   label="Address 2"
                   onBlur={handleBlur}
                   onChange={handleChange}
-                  value={values.address1}
+                  value={values.address2}
                   name="address2"
                   sx={{ gridColumn: 'span 4' }}
                 />
