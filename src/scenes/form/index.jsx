@@ -100,7 +100,7 @@ export default function Forms() {
                   name="email"
                   error={!!touched.email && !!errors.email}
                   helperText={touched.email && errors.email}
-                  sx={{ gridColumn: 'span 4' }}
+                  sx={{ gridColumn: 'span 2' }}
                 />
 
                 <TextField
@@ -114,7 +114,7 @@ export default function Forms() {
                   name="contact"
                   error={!!touched.contact && !!errors.contact}
                   helperText={touched.contact && errors.contact}
-                  sx={{ gridColumn: 'span 4' }}
+                  sx={{ gridColumn: 'span 2' }}
                 />
 
                 <TextField
@@ -142,6 +142,11 @@ export default function Forms() {
                   name="address2"
                   sx={{ gridColumn: 'span 4' }}
                 />
+              </Box>
+              <Box display="flex" justifyContent="end" mt="20px">
+                <Button type="submit" color="secondary" variant="contained">
+                  Create New User
+                </Button>
               </Box>
             </form>
           );
