@@ -121,7 +121,7 @@ export default function Calendar() {
                 date: '2022-09-28',
               },
             ]}
-            eventsSet={(events) => setCurrentEvents(events)}
+            // eventsSet={(events) => setCurrentEvents(events)}
           />
         </Box>
       </Box>
