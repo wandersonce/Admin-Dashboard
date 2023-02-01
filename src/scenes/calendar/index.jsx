@@ -19,7 +19,6 @@ import { tokens } from '../../theme';
 export default function Calendar() {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
   const [currentEvents, setCurrentEvents] = useState([]);
 
   const handleDateClick = (selected) => {
@@ -41,7 +40,7 @@ export default function Calendar() {
   const handleEventClick = (selected) => {
     if (
       window.confirm(
-        `Are you sure yoy want to delete the event '${selected.event.title}`
+        `Are you sure you want to delete the event '${selected.event.title}'`
       )
     ) {
       selected.event.remove();
@@ -50,10 +49,10 @@ export default function Calendar() {
 
   return (
     <Box m="20px">
-      <Header title="CALENDAR" subtitle="Full Calendar Interactive Page" />
+      <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
 
       <Box display="flex" justifyContent="space-between">
-        {/* Calendar Sidebar */}
+        {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 20%"
           backgroundColor={colors.primary[400]}
@@ -87,7 +86,8 @@ export default function Calendar() {
             ))}
           </List>
         </Box>
-        {/* Calendar */}
+
+        {/* CALENDAR */}
         <Box flex="1 1 100%" ml="15px">
           <FullCalendar
             height="75vh"
@@ -109,7 +109,6 @@ export default function Calendar() {
             dayMaxEvents={true}
             select={handleDateClick}
             eventClick={handleEventClick}
-            eventsSet={(events) => setCurrentEvents(events)}
             initialEvents={[
               {
                 id: '12315',
@@ -122,6 +121,7 @@ export default function Calendar() {
                 date: '2022-09-28',
               },
             ]}
+            eventsSet={(events) => setCurrentEvents(events)}
           />
         </Box>
       </Box>
