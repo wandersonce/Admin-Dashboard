@@ -48,7 +48,7 @@ export default function PieChart() {
         modifiers: [['darker', 0.2]],
       }}
       arcLinkLabelsSkipAngle={10}
-      arcLinkLabelsTextColor="#333333"
+      arcLinkLabelsTextColor={colors.gray[100]}
       arcLinkLabelsThickness={2}
       arcLinkLabelsColor={{ from: 'color' }}
       enableArcLabels={false}
